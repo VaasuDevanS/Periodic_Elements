@@ -51,7 +51,7 @@ get() method
 {'BoilingPoint': {'Farenheit': -423.166, 'Celsius': -252.87, 'Kelvin': 20.280005}, 'Name': 'Hydrogen', 'Density': '0.08988 g/cm3 (@293k)', 'CrystalStructure': 'Hexagonal', 'AtomicMass': '1.00794 amu', 'Discovery': {'NameOrigin': 'From Greek words hudor (water) & gennan (generate)', 'Discoverer': 'Henry Cavendish', 'Year': '1766'}, 'MeltingPoint': {'Farenheit': -434.45203, 'Celsius': -259.14, 'Kelvin': 14.009985}, 'ObtainedFrom': 'mines, oil, gas wells', 'Classification': 'Non-Metal', 'Color': 'colorless', 'Symbol': 'H', 'AtomicNumber': 1, 'Protons_Electrons': '1', 'Uses': 'Balloons & Metal Refining', 'Neutrons': '0'}
 
 compare() method
-======================================================
+****************
 >>> import elements
 >>> elements.compare(elements.Au,elements.He)
 =====================================================
@@ -66,11 +66,14 @@ Density           | 19.32 g/cm3         0.1785 g/cm3
 Color             | Gold                colorless
 =====================================================
 
-Element types [Alkali_Metals, Alkaline_Earth_Metals, Halogens, Metalloids, Rare_Earth_Elements, Rare_Gases, Noble_Gases, Transition_Metals, Non_Metals, Others]
-================================================================================
+Element types
+*************
+[Alkali_Metals, Alkaline_Earth_Metals, Halogens, Metalloids, Rare_Earth_Elements, Rare_Gases, Noble_Gases, Transition_Metals, Non_Metals, Others]
+
 >>> import elements
 >>> elements.Alkali_Metals
 [<Cesium Element>, <Francium Element>, <Lithium Element>, <Potassium Element>, <Rubidium Element>, <Sodium Element>]
+
 
 keys
 ****
