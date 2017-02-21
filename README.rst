@@ -26,15 +26,15 @@ for Python2.X Series,
 >>> import elements
 
 
->>> print elements.H
+>>> elements.H
 <Hydrogen Element>
->>> print elements.hydrogen.AtomicMass
+>>> elements.hydrogen.AtomicMass
 '1.00794 amu'
 
 show() method
 =============================================
 
->>> print elements.H.show()
+>>> elements.H.show()
 Name: Hydrogen
 Symbol: H
 AtomicNumber: 1
@@ -60,7 +60,6 @@ get() method
 
 compare() method
 ****************
->>> import elements
 >>> elements.compare(elements.Au,elements.He)
 =====================================================
 Property          | Gold                Helium
@@ -78,7 +77,7 @@ Element types
 *************
 [Alkali_Metals, Alkaline_Earth_Metals, Halogens, Metalloids, Rare_Earth_Elements, Rare_Gases, Noble_Gases, Transition_Metals, Non_Metals, Others]
 
->>> import elements
+
 >>> elements.Alkali_Metals
 [<Cesium Element>, <Francium Element>, <Lithium Element>, <Potassium Element>, <Rubidium Element>, <Sodium Element>]
 
@@ -88,16 +87,14 @@ keys
 
 Find for any element from the keys ['AtomicMass', 'AtomicNumber', 'BoilingPoint', 'Classification', 'Color', 'CrystalStructure', 'Density', 'Discovery', 'MeltingPoint', 'Name', 'Neutrons', 'ObtainedFrom', 'Protons_Electrons', 'Symbol', 'Uses']
 
->>> import elements
->>> print elements.Au.Discovery
+>>> elements.Au.Discovery
 {'NameOrigin': 'From the Old English word geolo (yellow)', 'Discoverer': 'Unknown', 'Year': 'circa3000BC'}
 >>> print elements.Si.MeltingPoint
 {'Farenheit': 2570.0, 'Celsius': 1410.0, 'Kelvin': 1683.15}
 
 Periodic table
 ================
->>> import elements
->>> print elements.Table
+>>> print elements.Table  # print(elements.Table)
   -----                                                               -----
 1 | H |                                                               |He |
   |---+----                                       --------------------+---|
