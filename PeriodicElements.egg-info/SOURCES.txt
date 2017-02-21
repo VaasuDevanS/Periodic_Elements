@@ -1,0 +1,11 @@
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+PeriodicElements.egg-info/PKG-INFO
+PeriodicElements.egg-info/SOURCES.txt
+PeriodicElements.egg-info/dependency_links.txt
+PeriodicElements.egg-info/not-zip-safe
+PeriodicElements.egg-info/top_level.txt
+elements/__init__.py
+elements/elements.py
