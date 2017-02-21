@@ -17,7 +17,15 @@ Basic Usage
 Getting the Values
 =============================================
 
+for Python 3.X Series,
+
+>>> from elements import elements
+
+for Python2.X Series,
+
 >>> import elements
+
+
 >>> print elements.H
 <Hydrogen Element>
 >>> print elements.hydrogen.AtomicMass
