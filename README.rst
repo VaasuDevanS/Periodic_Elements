@@ -10,29 +10,38 @@ Github Url https://www.github.com/VaasuDevanS
 Installation
 ************
 
->>> pip install periodicelements
+>>> python -m pip install PeriodicElements
+>>> python3 -m pip install PeriodicElements
 
-Basic Usage
-************
-Getting the Values
+Importing the Package
 =============================================
 
 for Python 3.X Series,
 
 >>> from elements import elements
+>>> import elements.elements as elements
 
 for Python2.X Series,
 
 >>> import elements
 
+Basic Usage
+***********
 
 >>> elements.H
 <Hydrogen Element>
->>> elements.hydrogen.AtomicMass
+>>> elements.hydrogen.AtomicMass        #elements.H.AtomicMass
 '1.00794 amu'
 
+Find for any element from the keys ['AtomicMass', 'AtomicNumber', 'BoilingPoint', 'Classification', 'Color', 'CrystalStructure', 'Density', 'Discovery', 'MeltingPoint', 'Name', 'Neutrons', 'ObtainedFrom', 'Protons_Electrons', 'Symbol', 'Uses']
+
+>>> elements.Au.Discovery
+{'NameOrigin': 'From the Old English word geolo (yellow)', 'Discoverer': 'Unknown', 'Year': 'circa3000BC'}
+>>> print elements.Si.MeltingPoint
+{'Farenheit': 2570.0, 'Celsius': 1410.0, 'Kelvin': 1683.15}
+
 show() method
-=============================================
+*************
 
 >>> elements.H.show()
 Name: Hydrogen
@@ -52,11 +61,16 @@ Uses: Balloons & Metal Refining
 ObtainedFrom: mines, oil, gas wells
 
 get() method
-=======================================================
+*************
 
 >>> data=elements.H.get()     #or elements.hydrogen.get()
 >>> print data
-{'BoilingPoint': {'Farenheit': -423.166, 'Celsius': -252.87, 'Kelvin': 20.280005}, 'Name': 'Hydrogen', 'Density': '0.08988 g/cm3 (@293k)', 'CrystalStructure': 'Hexagonal', 'AtomicMass': '1.00794 amu', 'Discovery': {'NameOrigin': 'From Greek words hudor (water) & gennan (generate)', 'Discoverer': 'Henry Cavendish', 'Year': '1766'}, 'MeltingPoint': {'Farenheit': -434.45203, 'Celsius': -259.14, 'Kelvin': 14.009985}, 'ObtainedFrom': 'mines, oil, gas wells', 'Classification': 'Non-Metal', 'Color': 'colorless', 'Symbol': 'H', 'AtomicNumber': 1, 'Protons_Electrons': '1', 'Uses': 'Balloons & Metal Refining', 'Neutrons': '0'}
+{'BoilingPoint': {'Farenheit': -423.166, 'Celsius': -252.87, 'Kelvin': 20.280005}, 'Name': 'Hydrogen', 'Density': '0.08988 g/cm3 (@293k)', 
+'CrystalStructure': 'Hexagonal', 'AtomicMass': '1.00794 amu', 'Discovery': {'NameOrigin': 'From Greek words hudor (water) & gennan (generate)', 
+'Discoverer': 'Henry Cavendish', 'Year': '1766'}, 
+'MeltingPoint': {'Farenheit': -434.45203, 'Celsius': -259.14, 'Kelvin': 14.009985}, 
+'ObtainedFrom': 'mines, oil, gas wells', 'Classification': 'Non-Metal', 'Color': 'colorless', 'Symbol': 'H', 
+'AtomicNumber': 1, 'Protons_Electrons': '1', 'Uses': 'Balloons & Metal Refining', 'Neutrons': '0'}
 
 compare() method
 ****************
@@ -73,27 +87,61 @@ Density           | 19.32 g/cm3         0.1785 g/cm3
 Color             | Gold                colorless
 =====================================================
 
-Element types
-*************
+Elemental Classification
+************************
 [Alkali_Metals, Alkaline_Earth_Metals, Halogens, Metalloids, Rare_Earth_Elements, Rare_Gases, Noble_Gases, Transition_Metals, Non_Metals, Others]
 
 
 >>> elements.Alkali_Metals
 [<Cesium Element>, <Francium Element>, <Lithium Element>, <Potassium Element>, <Rubidium Element>, <Sodium Element>]
 
+Get all the element names of type String
 
-keys
-****
+>>> MyElements=elements.AllElements
+>>> len(MyElements)
+112
 
-Find for any element from the keys ['AtomicMass', 'AtomicNumber', 'BoilingPoint', 'Classification', 'Color', 'CrystalStructure', 'Density', 'Discovery', 'MeltingPoint', 'Name', 'Neutrons', 'ObtainedFrom', 'Protons_Electrons', 'Symbol', 'Uses']
+Get all the element symbols of type String
 
->>> elements.Au.Discovery
-{'NameOrigin': 'From the Old English word geolo (yellow)', 'Discoverer': 'Unknown', 'Year': 'circa3000BC'}
->>> print elements.Si.MeltingPoint
-{'Farenheit': 2570.0, 'Celsius': 1410.0, 'Kelvin': 1683.15}
+>>> MySymbols=elements.AllSymbols
+>>> AllSymbols
+['Ac', 'Ag', 'Al', 'Am', 'Ar', 'As', 'At', 'Au', 'B', 'Ba', 'Be', 'Bh', 'Bi', 'Bk', 'Br
+', 'C', 'Ca', 'Cd', 'Ce', 'Cf', 'Cl', 'Cm', 'Co', 'Cr', 'Cs', 'Cu', 'Db', 'Dy', 'Er', '
+Es', 'Eu', 'F', 'Fe', 'Fm', 'Fr', 'Ga', 'Gd', 'Ge', 'H', 'He', 'Hf', 'Hg', 'Ho', 'Hs',
+'I', 'In', 'Ir', 'K', 'Kr', 'La', 'Li', 'Lr', 'Lu', 'Md', 'Mg', 'Mn', 'Mo', 'Mt', 'N',
+'Na', 'Nb', 'Nd', 'Ne', 'Ni', 'No', 'Np', 'O', 'Os', 'P', 'Pa', 'Pb', 'Pd', 'Pm', 'Po',
+ 'Pr', 'Pt', 'Pu', 'Ra', 'Rb', 'Re', 'Rf', 'Rh', 'Rn', 'Ru', 'S', 'Sb', 'Sc', 'Se', 'Sg
+', 'Si', 'Sm', 'Sn', 'Sr', 'Ta', 'Tb', 'Tc', 'Te', 'Th', 'Ti', 'Tl', 'Tm', 'U', 'Uub',
+'Uun', 'Uuu', 'V', 'W', 'Xe', 'Y', 'Yb', 'Zn', 'Zr']
+
+Miscellaneous
+*************
+Get all the element objects for your Specific Operation
+
+>>> data=elements.Elements
+
+Sorting the elements
+====================
+
+>>> sorted(data,key=lambda i:i.AtomicNumber)  # Based on their AtomicNumber
+
+>>> sorted(data,key=lambda i:i.AtomicMass)    # Based on their AtomicMass
+
+>>> def fun(i):
+       if type(i.BoilingPoint) is dict:
+            return i.BoilingPoint['Celsius']
+
+>>> sorted(data,key=fun)[19:]          # Based on the BoilingPoint. (Some are not known)
+
+>>> def fun(i):
+       if type(i.MeltingPoint) is dict:
+            return i.MeltingPoint['Celsius']
+
+>>> sorted(data,key=fun)[17:]          # Based on MeltingPoint.  (Some are not known)
+
 
 Periodic table
-================
+****************
 >>> print elements.Table  # print(elements.Table)
   -----                                                               -----
 1 | H |                                                               |He |
