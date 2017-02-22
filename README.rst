@@ -104,15 +104,8 @@ Get all the element names of type String
 Get all the element symbols of type String
 
 >>> MySymbols=elements.AllSymbols
->>> AllSymbols
-['Ac', 'Ag', 'Al', 'Am', 'Ar', 'As', 'At', 'Au', 'B', 'Ba', 'Be', 'Bh', 'Bi', 'Bk', 'Br
-', 'C', 'Ca', 'Cd', 'Ce', 'Cf', 'Cl', 'Cm', 'Co', 'Cr', 'Cs', 'Cu', 'Db', 'Dy', 'Er', '
-Es', 'Eu', 'F', 'Fe', 'Fm', 'Fr', 'Ga', 'Gd', 'Ge', 'H', 'He', 'Hf', 'Hg', 'Ho', 'Hs',
-'I', 'In', 'Ir', 'K', 'Kr', 'La', 'Li', 'Lr', 'Lu', 'Md', 'Mg', 'Mn', 'Mo', 'Mt', 'N',
-'Na', 'Nb', 'Nd', 'Ne', 'Ni', 'No', 'Np', 'O', 'Os', 'P', 'Pa', 'Pb', 'Pd', 'Pm', 'Po',
- 'Pr', 'Pt', 'Pu', 'Ra', 'Rb', 'Re', 'Rf', 'Rh', 'Rn', 'Ru', 'S', 'Sb', 'Sc', 'Se', 'Sg
-', 'Si', 'Sm', 'Sn', 'Sr', 'Ta', 'Tb', 'Tc', 'Te', 'Th', 'Ti', 'Tl', 'Tm', 'U', 'Uub',
-'Uun', 'Uuu', 'V', 'W', 'Xe', 'Y', 'Yb', 'Zn', 'Zr']
+>>> MySymbols
+['Ac', 'Ag', 'Al', 'Am', 'Ar', 'As', 'At', 'Au', 'B', 'Ba', 'Be', 'Bh', 'Bi', 'Bk', 'Br', 'C', 'Ca', 'Cd', 'Ce', 'Cf', 'Cl', 'Cm', 'Co', 'Cr', 'Cs', 'Cu', 'Db', 'Dy', 'Er', 'Es', 'Eu', 'F', 'Fe', 'Fm', 'Fr', 'Ga', 'Gd', 'Ge', 'H', 'He', 'Hf', 'Hg', 'Ho', 'Hs', 'I', 'In', 'Ir', 'K', 'Kr', 'La', 'Li', 'Lr', 'Lu', 'Md', 'Mg', 'Mn', 'Mo', 'Mt', 'N', 'Na', 'Nb', 'Nd', 'Ne', 'Ni', 'No', 'Np', 'O', 'Os', 'P', 'Pa', 'Pb', 'Pd', 'Pm', 'Po', 'Pr', 'Pt', 'Pu', 'Ra', 'Rb', 'Re', 'Rf', 'Rh', 'Rn', 'Ru', 'S', 'Sb', 'Sc', 'Se', 'Sg', 'Si', 'Sm', 'Sn', 'Sr', 'Ta', 'Tb', 'Tc', 'Te', 'Th', 'Ti', 'Tl', 'Tm', 'U', 'Uub', 'Uun', 'Uuu', 'V', 'W', 'Xe', 'Y', 'Yb', 'Zn', 'Zr']
 
 Miscellaneous
 *************
@@ -130,14 +123,12 @@ Sorting the elements
 >>> def fun(i):
        if type(i.BoilingPoint) is dict:
             return i.BoilingPoint['Celsius']
-
->>> sorted(data,key=fun)[19:]          # Based on the BoilingPoint. (Some are not known)
+>>> sorted(data,key=fun)[19:]          # Based on the BoilingPoint. (Some are unknown)
 
 >>> def fun(i):
        if type(i.MeltingPoint) is dict:
             return i.MeltingPoint['Celsius']
-
->>> sorted(data,key=fun)[17:]          # Based on MeltingPoint.  (Some are not known)
+>>> sorted(data,key=fun)[17:]          # Based on MeltingPoint.  (Some are unknown)
 
 
 Periodic table
