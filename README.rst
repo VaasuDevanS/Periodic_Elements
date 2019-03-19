@@ -1,6 +1,13 @@
 PeriodicElements
 ****************
 
+|PyPI download month| |PyPI download year| |PyPI download week|
+
+.. |PyPI download month| image:: https://pepy.tech/badge/periodicelements 
+.. |PyPI download year| image:: https://pepy.tech/badge/periodicelements/month
+.. |PyPI download week| image:: https://pepy.tech/badge/periodicelements/week
+
+
 A python API/console script for the periodic table elements. 
 
 Created by Vaasu Devan S <vaasuceg.96@gmail.com>
